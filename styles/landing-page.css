@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.navbar {
+  display: flex;
+  padding: 25px 50px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.navbar .navbar-logo {
+  width: 45px;
+  cursor: pointer;
+}
+
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar .nav-menu .nav-links {
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 60px;
+  font-weight: normal;
+  color: #18898c;
+  transition: all 0.5s;
+}
+
+.navbar .nav-menu .nav-links:hover {
+  color: #27a392;
+}
+
+.navbar .nav-menu .nav-links.nav-links-btn {
+  background-color: #18898c;
+  color: #ffffff;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.navbar .nav-menu .nav-links.nav-links-btn:hover {
+  background-color: #27a392;
+}
+
+.navbar .navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #18898c;
+  display: none;
+}
+
+/* End Navbar */
+
+/* Jumbotron */
+.jumbotron {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.jumbotron .jumbotron-container {
+  padding: 90px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(102.12deg, #18898C 0.69%, rgba(239, 237, 237, 0) 97.94%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  padding: 88px;
+}
+
+.jumbotron .jumbotron-container .description {
+  background: -webkit-linear-gradient(360deg, #0A3D5D, #FA8C14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 30px;
+}
+
+.jumbotron .jumbotron-container .description h1{
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.jumbotron .jumbotron-container .description p{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.jumbotron .jumbotron-container .image {
+  width: 60%;
+}
+/* End Jumbotron */
+
+/* Content */
+.content {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content .title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.content .subtitle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.content .spesification-container {
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content .spesification-container .spesification-item {
+  text-align: center;
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+
+.content .spesification-container .spesification-item .value {
+  font-size: 96px;
+  font-weight: 700;
+}
+.content .spesification-container .spesification-item .name {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 400;
+}
+/* End Content */
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  background-color:#217C72;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+/* End Footer */
+
+/* Media Query */
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    padding: 10px 50px;
+  }
+
+  .navbar .navbar-logo {
+    width: 35px;
+  }
+
+  .navbar .nav-menu {
+    width: 100vw;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .navbar .nav-menu.active {
+    right: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .navbar .nav-menu .nav-links {
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .navbar .navbar-toggle:hover {
+    cursor: pointer;
+  }
+
+  .navbar .navbar-toggle .bar {
+    display: block;
+  }
+
+  .navbar #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .jumbotron {
+    margin-top: 60px;
+  }
+
+  .jumbotron .jumbotron-container {
+    text-align: center;
+    padding: 70px 10px;
+    flex-direction: column;
+  }
+
+  .jumbotron .jumbotron-container .description{
+    margin: 0;
+  }
+
+  .jumbotron .jumbotron-container .description h1 {
+    font-size: 35px;
+  }
+
+  .jumbotron .jumbotron-container .description p {
+    font-size: 24px;
+  }
+
+  .jumbotron .jumbotron-container .image {
+    width: 275px;
+    margin-top: 40px;
+  }
+
+  .content {
+    margin-top: 60px;
+  }
+
+  .content .title {
+    font-size: 24px;
+  }
+
+  .content .subtitle {
+    font-size: 12px;
+  }
+
+  .content .spesification-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .content .spesification-container .spesification-item .value {
+    font-size: 40px;
+  }
+
+  .content .spesification-container .spesification-item .name {
+    font-size: 18px;
+    margin-top: 2px;
+  }
+
+  footer {
+    height: 60px;
+    margin-top: 100px;
+  }
+
+  footer h1 {
+    font-size: 14px;
+  }
+}
