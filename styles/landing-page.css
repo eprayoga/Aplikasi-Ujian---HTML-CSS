@@ -62,6 +62,10 @@ nav {
   background-color: #27a392;
 }
 
+.navbar .navbar-toggle {
+  cursor: pointer;
+}
+
 .navbar .navbar-toggle .bar {
   width: 25px;
   height: 3px;

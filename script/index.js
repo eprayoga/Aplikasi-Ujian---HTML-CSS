@@ -1,3 +1,4 @@
+// Navbar "index.html"
 const menu = document.getElementById("mobile-menu");
 const menuLinks = document.querySelector(".nav-menu");
 
